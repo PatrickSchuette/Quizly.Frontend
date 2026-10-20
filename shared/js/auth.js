@@ -259,11 +259,11 @@ function clearError(input) {
 function togglePasswordVisibility(input, icon) {
   if (input.type === "password") {
     input.type = "text";
-    icon.src = "/assets/icons/visibility.svg";
+    icon.src = "../assets/icons/visibility.svg";
     icon.alt = "picture of an open eye";
   } else {
     input.type = "password";
-    icon.src = "/assets/icons/visibility_off.svg";
+    icon.src = "../assets/icons/visibility_off.svg";
     icon.alt = "picture of a closed eye";
   }
 }

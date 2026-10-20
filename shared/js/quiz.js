@@ -92,7 +92,7 @@ function createQuizLiItem(quiz) {
     `window.location.href='/pages/quizoverview.html?id=${quiz.id}'`,
   );
   span.innerHTML = quiz.title;
-  img.src = "/assets/icons/delete.png";
+  img.src = "../assets/icons/delete.png";
   img.alt = "delete quiz";
   img.classList.add("delete-icon");
   img.addEventListener("click", (e) => {
@@ -272,9 +272,9 @@ function showAnswers(bool) {
   const { correct, wrong } = getCorrectAndWrongAnswers();
 
   document.getElementById("correct-answers").innerHTML =
-    `<img src="/assets/icons/wright.png" alt="wright answer checkmark"> Correct answers: ${correct}`;
+    `<img src="../assets/icons/wright.png" alt="wright answer checkmark"> Correct answers: ${correct}`;
   document.getElementById("wrong-answers").innerHTML =
-    `<img src="/assets/icons/wrong.png" alt="wrong answer checkmark"> Wrong answers: ${wrong}`;
+    `<img src="../assets/icons/wrong.png" alt="wrong answer checkmark"> Wrong answers: ${wrong}`;
 
   generateAnswerList(bool);
 }
@@ -385,7 +385,7 @@ function createCorrectAnswerLine(correctAnswer) {
  */
 function createStatusImage(isCorrect) {
   const img = document.createElement("img");
-  img.src = isCorrect ? "/assets/icons/wright.png" : "/assets/icons/wrong.png";
+  img.src = isCorrect ? "../assets/icons/wright.png" : "../assets/icons/wrong.png";
   img.alt = isCorrect ? "correct checkmark" : "wrong checkmark";
   return img;
 }

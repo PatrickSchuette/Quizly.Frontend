@@ -107,11 +107,11 @@ function setupInputTracking(inputElement, iconElement, key) {
   let timeoutId;
 
   inputElement.addEventListener("keydown", function () {
-    iconElement.src = "/assets/icons/input_pen_green.png";
+    iconElement.src = "../assets/icons/input_pen_green.png";
     clearTimeout(timeoutId);
 
     timeoutId = setTimeout(() => {
-      iconElement.src = "/assets/icons/green_hook.png";
+      iconElement.src = "../assets/icons/green_hook.png";
       CURRENTQUIZ[key] = inputElement.value;
       let id = CURRENTQUIZ.id;
       updateQuiz(id, CURRENTQUIZ);
