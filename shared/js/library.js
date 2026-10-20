@@ -43,7 +43,7 @@ function createQuizCard(quiz, i) {
 }
 
 function openQuiz(id) {
-  window.location.href = `/pages/quizoverview.html?id=${id}`;
+  window.location.href = `../pages/quizoverview.html?id=${id}`;
 }
 
 document

@@ -89,7 +89,7 @@ function createQuizLiItem(quiz) {
   let img = document.createElement("img");
   span.setAttribute(
     "onclick",
-    `window.location.href='/pages/quizoverview.html?id=${quiz.id}'`,
+    `window.location.href='../pages/quizoverview.html?id=${quiz.id}'`,
   );
   span.innerHTML = quiz.title;
   img.src = "../assets/icons/delete.png";
@@ -105,7 +105,7 @@ function createQuizLiItem(quiz) {
 }
 
 function generateNewQuiz() {
-  window.location.href = "/pages/library.html";
+  window.location.href = "../pages/library.html";
 }
 
 async function deleteQuiz(id) {
@@ -251,13 +251,13 @@ async function backToOverview() {
     });
 
     if (response && response.ok) {
-      window.location.href = `/pages/quizoverview.html?id=${quizId}`;
+      window.location.href = `../pages/quizoverview.html?id=${quizId}`;
     } else {
-      window.location.href = "/pages/library.html";
+      window.location.href = "../pages/library.html";
     }
   } catch (error) {
     console.error("Fehler beim Prüfen des Quiz:", error);
-    window.location.href = "/pages/library.html";
+    window.location.href = "../pages/library.html";
   }
 }
 

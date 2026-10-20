@@ -4,9 +4,9 @@ function initHeader() {
 }
 
 function goToLibrary() {
-  window.location.href = "/pages/library.html";
+  window.location.href = "../pages/library.html";
 }
 
 function goToLogin() {
-  window.location.href = "/pages/login.html";
+  window.location.href = "../pages/login.html";
 }

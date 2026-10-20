@@ -90,7 +90,7 @@ async function sendLoginRequest(body) {
 
     showToastMessage(false, "Login successful");
     setTimeout(() => {
-      window.location.href = "/pages/library.html";
+      window.location.href = "../pages/library.html";
     }, 2000);
   } catch (error) {
     showToastMessage(true, `Network error: ${error.message}`);
@@ -126,7 +126,7 @@ async function signUpUser(event) {
 
     showToastMessage(false, "Register successful");
     setTimeout(() => {
-      window.location.href = "/pages/login.html";
+      window.location.href = "../pages/login.html";
     }, 2000);
   } catch (error) {
     showToastMessage(true, `Network error: ${error.message}`);
@@ -144,17 +144,17 @@ async function logOut(notoken) {
       credentials: "include",
     });
     if (notoken) {
-      window.location.href = "/pages/login.html";
+      window.location.href = "../pages/login.html";
     } else {
       showToastMessage(false, "Logout successfully!");
       setTimeout(() => {
-        window.location.href = "/pages/login.html";
+        window.location.href = "../pages/login.html";
       }, 2000);
     }
   } catch (error) {
     showToastMessage(true, ["Logout error"]);
     setTimeout(() => {
-      window.location.href = "/pages/login.html";
+      window.location.href = "../pages/login.html";
     }, 2000);
   }
 }
@@ -298,14 +298,14 @@ async function apiFetch(endpoint, options = {}) {
   if (response.status === 401 || response.status === 403) {
     const refreshed = await refreshToken();
     if (!refreshed) {
-      window.location.href = "/pages/login.html";
+      window.location.href = "../pages/login.html";
       return null;
     }
 
     response = await doRequest();
 
     if (response.status === 401 || response.status === 403) {
-      window.location.href = "/pages/login.html";
+      window.location.href = "../pages/login.html";
       return null;
     }
   }

@@ -124,16 +124,16 @@ function setupInputTracking(inputElement, iconElement, key) {
  */
 function goToQuiz() {
   let id = CURRENTQUIZ.id;
-  window.location.href = `/pages/quiz.html?id=${id}`;
+  window.location.href = `../pages/quiz.html?id=${id}`;
 }
 
 function changeOverviewToQuiz(id) {
-  window.location.href = `/pages/quizoverview.html?id=${id}`;
+  window.location.href = `../pages/quizoverview.html?id=${id}`;
 }
 
 async function seeAll() {
   let isOverview = true;
   let id = CURRENTQUIZ.id;
   window.location.href =
-    "/pages/quiz.html?id=" + id + "&isOverview=" + isOverview;
+    "../pages/quiz.html?id=" + id + "&isOverview=" + isOverview;
 }
