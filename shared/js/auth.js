@@ -63,7 +63,15 @@ async function loginUser(event) {
     return;
   }
   const body = getFormData(form, "login");
+  await sendLoginRequest(body);
+}
 
+async function demoLogin() {
+  const body = { username: DEMO_USERNAME, password: DEMO_PASSWORD };
+  await sendLoginRequest(body);
+}
+
+async function sendLoginRequest(body) {
   try {
     const response = await fetch(`${API_BASE_URL}${LOGIN_URL}`, {
       method: "POST",

@@ -6,3 +6,6 @@ const LOGOUT_URL = "logout/";
 const TOKENREFRESH_URL = "token/refresh/";
 const CREATE_QUIZ_URL = "quizzes/";
 const GET_QUIZ_URL = "quizzes/";
+
+const DEMO_USERNAME = "Demo";
+const DEMO_PASSWORD = "Demo1234!";

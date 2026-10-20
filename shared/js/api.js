@@ -1,3 +1,12 @@
+async function getErrorMessage(response) {
+  try {
+    const data = await response.json();
+    return data.detail || data.url?.[0] || "Error generating quiz";
+  } catch (error) {
+    return "Error generating quiz";
+  }
+}
+
 async function createQuiz(url) {
   document.querySelector(".overlay").classList.remove("d_none");
   url = url.trim();
@@ -8,7 +17,8 @@ async function createQuiz(url) {
     });
 
     if (!response || !response.ok) {
-      showToastMessage(true, ["Error generating quiz"]);
+      const errorMessage = response ? await getErrorMessage(response) : "Error generating quiz";
+      showToastMessage(true, [errorMessage]);
       document.querySelector(".overlay").classList.add("d_none");
       return null;
     }
