@@ -1,47 +1,169 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quizly-Privacy Policy</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../shared/css/variables.css" />
-    <link rel="stylesheet" href="../shared/css/standart.css" />
-    <link rel="stylesheet" href="../shared/css/fonts.css" />
-    <link rel="stylesheet" href="../shared/css/policy.css" />
-    <link
-      rel="icon"
-      href="../assets/icons/robot_default.png"
-      type="image/x-icon"
-    />
-    <script src="../shared/js/header.js"></script>
-    <script src="../shared/js/template.js"></script>
-    <script src="../shared/js/helper.js"></script>
-  </head>
-  <body onload="initHeader()" class="pos_rel">
-    <section>
-      <div class="background-wave">
-        <img src="/assets/icons/wave.png" alt="a background wave image" />
-      </div>
-    </section>
-    <header>
-      <div id="header" class="z_5"></div>
-    </header>
 
-    <main class="main-privacy">
-      <div class="p48">
-        <h2>Subtitle</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ea
-          placeat illo omnis, atque temporibus nostrum quia! Impedit, aliquid.
-          Placeat impedit neque quod quasi eos fuga ipsa fugit odit voluptatem?
-        </p>
-      </div>
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quizly - Privacy Policy</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../shared/css/variables.css" />
+  <link rel="stylesheet" href="../shared/css/standart.css" />
+  <link rel="stylesheet" href="../shared/css/fonts.css" />
+  <link rel="stylesheet" href="../shared/css/policy.css" />
+  <link rel="icon" href="../assets/icons/robot_default.png" type="image/x-icon" />
+  <script src="../shared/js/header.js"></script>
+  <script src="../shared/js/template.js"></script>
+  <script src="../shared/js/helper.js"></script>
+</head>
 
-    <footer class="footer z-6 pos_abs">
-      <a href="./legalnotice.html">Legal notice</a>
-      <a href="./privacy.html">Privacy policy</a>
-    </footer>
-  </body>
+<body onload="initHeader()" class="pos_rel">
+  <section>
+    <div class="background-wave">
+      <img src="/assets/icons/wave.png" alt="a background wave image" />
+    </div>
+  </section>
+  <header>
+    <div id="header" class="z_5"></div>
+  </header>
+
+  <main class="main-privacy">
+    <div class="p48">
+      <h1>Privacy Policy</h1>
+
+      <h2>1. Controller</h2>
+      <p>
+        Patrick Schütte<br />
+        Email: <a href="mailto:[patrick.sch@web.de]">[patrick.sch@web.de]</a>
+      </p>
+      <p>
+        Quizly is a non-commercial learning project of the Developer
+        Akademie.
+      </p>
+
+      <h2>2. Which data is processed</h2>
+      <ul>
+        <li>
+          <strong>Account data:</strong> username, email address and your
+          password. The password is only stored as a secure hash, never in
+          plain text.
+        </li>
+        <li>
+          <strong>Quiz data:</strong> the YouTube links you enter and the
+          quizzes created from them (title, description, questions,
+          answers, creation date).
+        </li>
+        <li>
+          <strong>Technical data:</strong> when you visit the website, the
+          server automatically processes your IP address, date and time of
+          the request and the requested page. This is necessary to deliver
+          the website.
+        </li>
+      </ul>
+      <p>
+        The answers you choose while playing a quiz are only stored in your
+        browser and are not sent to the server.
+      </p>
+
+      <h2>3. Purpose and legal basis</h2>
+      <p>
+        Account and quiz data are processed to provide the functions of
+        Quizly: registration, login and creating, playing and managing
+        quizzes (Art. 6 (1) (b) GDPR). Technical data is processed to run
+        the website securely (Art. 6 (1) (f) GDPR).
+      </p>
+
+      <h2>4. Cookies</h2>
+      <p>
+        After login, two technically necessary cookies are set:
+        <strong>access_token</strong> (valid for 30 minutes) and
+        <strong>refresh_token</strong> (valid for 1 day). They keep you
+        logged in and can not be read by JavaScript (HttpOnly). Both
+        cookies are deleted when you log out. No tracking or advertising
+        cookies are used by Quizly itself.
+      </p>
+
+      <h2>5. Creating a quiz</h2>
+      <p>
+        When you create a quiz, the following steps happen:
+      </p>
+      <ul>
+        <li>
+          <strong>YouTube:</strong> the audio track of the video is
+          downloaded from the servers of YouTube (Google Ireland Limited,
+          Gordon House, Barrow Street, Dublin 4, Ireland). The audio file is
+          deleted again right after the transcription.
+        </li>
+        <li>
+          <strong>Transcription:</strong> the audio is converted into text
+          with Whisper AI. This happens locally on the server; the audio is
+          not sent to OpenAI.
+        </li>
+        <li>
+          <strong>Google Gemini:</strong> the transcript is sent to the
+          Gemini API of Google to generate the quiz questions. Quizly uses
+          the free version of the Gemini API. According to the Gemini API
+          terms, Google may use the submitted content to improve its
+          products, and it may be reviewed by people. No personal data of
+          your account is sent to Google, only the transcript of the video.
+        </li>
+      </ul>
+      <p>
+        Google may process data in countries outside the European Union,
+        for example in the USA. Further information:
+        <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>
+        and
+        <a href="https://ai.google.dev/gemini-api/terms" target="_blank">Gemini API Terms</a>.
+      </p>
+
+      <h2>6. Embedded YouTube videos</h2>
+      <p>
+        On the quiz overview page, the YouTube video of the quiz is
+        embedded. When this page is opened, your browser connects to the
+        servers of YouTube. YouTube receives your IP address and can set
+        its own cookies. The legal basis is Art. 6 (1) (f) GDPR; showing
+        the source video is part of the quiz function. Further information
+        can be found in the
+        <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.
+      </p>
+
+      <h2>7. Storage duration</h2>
+      <p>
+        Your account data is stored as long as your account exists. Quizzes
+        are stored until you delete them. When a quiz is deleted, all of
+        its questions are deleted as well. Login tokens expire
+        automatically after 30 minutes and 1 day; after logout the refresh
+        token can not be used again.
+      </p>
+
+      <h2>8. Your rights</h2>
+      <p>Under the GDPR you have the right to:</p>
+      <ul>
+        <li>access the data stored about you (Art. 15 GDPR)</li>
+        <li>have incorrect data corrected (Art. 16 GDPR)</li>
+        <li>have your data deleted (Art. 17 GDPR)</li>
+        <li>restrict the processing of your data (Art. 18 GDPR)</li>
+        <li>receive your data in a common format (Art. 20 GDPR)</li>
+        <li>object to the processing of your data (Art. 21 GDPR)</li>
+      </ul>
+      <p>
+        To use these rights, simply send an email to the address above. You
+        also have the right to lodge a complaint with a data protection
+        supervisory authority.
+      </p>
+
+      <h2>9. Changes</h2>
+      <p>
+        This privacy policy may be updated if Quizly changes. The current
+        version can always be found on this page.
+      </p>
+      <p>Last updated: October 2026</p>
+    </div>
+  </main>
+
+  <footer class="footer z-6 pos_abs">
+    <a href="./legalnotice.html" class="cu_po">Legal notice</a>
+    <a href="./privacy.html" class="cu_po">Privacy policy</a>
+  </footer>
+</body>
+
 </html>

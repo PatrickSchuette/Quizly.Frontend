@@ -3,18 +3,46 @@
   height: calc(100vh - 200px);
   z-index: 0;
   margin: auto;
-  overflow: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: center;
+  justify-content: start;
   max-width: 1440px;
+  position: relative;
 }
 
+.main-privacy h1,
 .main-privacy h2,
-.main-privacy p {
+.main-privacy p,
+.main-privacy li,
+.main-privacy a {
   color: var(--text-color-bluelight);
   font-family: "Kantumruy Pro", sans-serif;
+}
+
+.main-privacy h2 {
+  margin-top: 32px;
+}
+
+.main-privacy p,
+.main-privacy li {
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+.main-privacy ul {
+  padding-left: 24px;
+  list-style-position: outside;
+}
+
+.main-privacy li {
+  list-style: disc;
+}
+
+.main-privacy a {
+  text-decoration: underline;
+  word-break: break-word;
 }
 
 .background-objects {
@@ -45,6 +73,7 @@
   scale: 1;
   transition: scale 0.3s ease;
 }
+
 .back-btn:hover {
   scale: 1.3;
 }
